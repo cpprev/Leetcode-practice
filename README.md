@@ -1,8 +1,10 @@
-# Leetcode_practice
+# Leetcode practice
 
 ---
 
 :pushpin: This repository's goal is to follow my journey on https://leetcode.com.
+
+:pushpin: The solutions are implemented in the C++ language.
 
 :pushpin: You can find the solutions to the problems I solved inside the ~/exercises directory.
 
