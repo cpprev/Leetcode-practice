@@ -9,7 +9,6 @@ using namespace std;
 int main()
 {
     std::cout << "Hello World!\n";
-    map<string, string> m;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
