@@ -34,7 +34,7 @@ public:
             for (const auto& posA : curPos) {
                 for (auto rit = curPos.rbegin(); rit != curPos.rend(); ++rit) {
                     int posB = *rit;
-                    if (posA <= posB) {
+                    if (posA <= posB and posB - posA + 1 > maxSize) {
                         if (posB - posA + 1 > maxSize and isPalindromic(s, posA, posB)) {
                             start = posA;
                             maxSize = posB - posA + 1;
