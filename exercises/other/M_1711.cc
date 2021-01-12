@@ -23,8 +23,7 @@ public:
                         res += nbOcc * it->second;
                     }
                     else {
-                        if (nbOcc > 1)
-                            res += (nbOcc - 1) * nbOcc;
+                        res += (nbOcc - 1) * nbOcc;
                     }
                 }
             }
