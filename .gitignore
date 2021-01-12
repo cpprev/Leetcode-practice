@@ -1,0 +1,9 @@
+# Files
+
+*.o*
+
+# Directories
+
+*Debug*
+.vs
+.idea
