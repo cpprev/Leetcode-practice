@@ -1,5 +1,5 @@
 /// <summary>
-/// Store occurences in hashmap approach
+/// DP approach
 /// https://leetcode.com/problems/count-good-meals
 /// </summary>
 class Solution {
