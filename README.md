@@ -2,7 +2,7 @@
 
 ---
 
-:pushpin: This repository's goal is to follow my journey on https://leetcode.com.
+:pushpin: This repository's goal is to document my journey on https://leetcode.com.
 
 :pushpin: The solutions are implemented in the C++ language.
 
