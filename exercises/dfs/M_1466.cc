@@ -11,18 +11,16 @@ public:
 
         // check every node that the current is pointing to
         for (auto& dst : pointer[current]) {
-            if (seen[dst]) {
+            if (seen[dst])
                 continue;
-            }
             ++res;
             rec(seen, pointer, pointed, dst, res);
         }
 
         // check every node that points to the current
         for (auto& src : pointed[current]) {
-            if (seen[src]) {
+            if (seen[src])
                 continue;
-            }
             rec(seen, pointer, pointed, src, res);
         }
     }
@@ -32,9 +30,6 @@ public:
         map<int, set<int>> pointer;
         // map<dst, set<src>>
         map<int, set<int>> pointed;
-
-        vector<bool> seen(connections.size() + 1, false);
-
         for (auto& conn : connections) {
             int src = conn[0], dst = conn[1];
             pointer[src].insert(dst);
@@ -42,6 +37,7 @@ public:
         }
 
         int res = 0;
+        vector<bool> seen(connections.size() + 1, false);
         rec(seen, pointer, pointed, 0, res);
         return res;
     }
