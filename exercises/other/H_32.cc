@@ -1,5 +1,5 @@
 /// <summary>
-/// Not the most optimal approach speed wise ( O(n) best case, but O(n^2) worst case ) but O(1) space complexity
+/// Naive approach speed wise ( O(n) best case, but O(n^2) worst case ) but O(1) space complexity
 /// https://leetcode.com/problems/longest-valid-parentheses/
 /// </summary>
 class Solution {
