@@ -1,7 +1,7 @@
 /// <summary>
 /// DP approach
-/// Time complexity : O(n^m)
-/// Space complexity : O(n^m)
+/// Time complexity : O(n*m)
+/// Space complexity : O(n*m)
 /// https://leetcode.com/problems/largest-submatrix-with-rearrangements/
 /// </summary>
 class Solution {
