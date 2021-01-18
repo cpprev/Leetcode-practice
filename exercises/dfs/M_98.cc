@@ -6,18 +6,18 @@
 /// </summary>
 class Solution {
 public:
-    bool dfs(TreeNode* root, TreeNode* low, TreeNode* high)
+    bool dfs(TreeNode* root, int low, int high)
     {
         if (not root)
             return true;
 
-        if ((low and root->val <= low->val) or (high and root->val >= high->val))
+        if ((low != -1 and root->val <= low) or (high != -1 and root->val >= high))
             return false;
 
-        return dfs(root->left, low, root) and dfs(root->right, root, high);
+        return dfs(root->left, low, root->val) and dfs(root->right, root->val, high);
     }
 
     bool isValidBST(TreeNode* root) {
-        return dfs(root, nullptr, nullptr);
+        return dfs(root, -1, -1);
     }
 };
