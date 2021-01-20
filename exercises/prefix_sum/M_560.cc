@@ -12,7 +12,8 @@ public:
         unordered_map<int, int> F;
         F[0] = 1;
         for (int i = 0; i < n; ++i) {
-            // Here, we look for all : F[i] - F[j] = k.
+            // Important : F[i] - F[j] = sums(i::j)
+            // Here, we look for all : F[i] - F[j] = k, to find what we want
             // So, F[j] = F[i] - k (ie: key = sum - k)
             sum += nums[i];
             int key = sum - k;
