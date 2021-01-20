@@ -8,14 +8,17 @@ class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
         int n = nums.size(), sum = 0, res = 0;
-        unordered_map<int, int> pos;
-        pos[0] = 1;
+        // In this map we store the prefix sums [nums[0], nums[0] + nums[1], ...]
+        unordered_map<int, int> F;
+        F[0] = 1;
         for (int i = 0; i < n; ++i) {
+            // Here, we look for all : F[i] - F[j] = k.
+            // So, F[j] = F[i] - k (ie: key = sum - k)
             sum += nums[i];
             int key = sum - k;
-            if (pos.count(key))
-                res += pos[key];
-            pos[sum] += 1;
+            if (F.count(key))
+                res += F[key];
+            F[sum] += 1;
         }
         return res;
     }
