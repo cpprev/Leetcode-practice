@@ -11,7 +11,9 @@ public:
         unordered_map<int, int> F{ {0, 1} };
         for (int i = 0; i < n; ++i) {
             sum += A[i];
-            int key = sum % K < 0 ? sum % K + K : sum % K;
+            int key = sum % K;
+            key = key < 0 ? key + K : key;
+
             if (F.count(key))
                 res += F[key];
             ++F[key];
