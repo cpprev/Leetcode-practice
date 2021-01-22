@@ -1,7 +1,7 @@
 /// <summary>
 /// dfs approach
 /// Time complexity : O(n), n being the number of nodes in the tree
-/// Space complexity : O(1)
+/// Space complexity : O(n)
 /// https://leetcode.com/problems/validate-binary-search-tree/
 /// </summary>
 class Solution {
