@@ -9,16 +9,16 @@ public:
     int sum, MOD = int(1e9) + 7;
     pair<long, long> max = { 0, 0 };
 
-    int getSum(TreeNode* root) {
+    int getsum(TreeNode* root) {
         if (not root) return 0;
-        return root->val + getSum(root->left) + getSum(root->right);
+        return root->val + getsum(root->left) + getsum(root->right);
     }
 
-    int rec(TreeNode* root) {
+    int dfs(TreeNode* root) {
         if (not root) return 0;
 
-        long left = rec(root->left);
-        long right = rec(root->right);
+        long left = dfs(root->left);
+        long right = dfs(root->right);
 
         long local = left * (sum - left);
         if (local > max.first * max.second) max = { left, sum - left };
@@ -30,9 +30,9 @@ public:
     }
 
     int maxProduct(TreeNode* root) {
-        sum = getSum(root);
+        sum = getsum(root);
 
-        rec(root);
+        dfs(root);
 
         return (max.first * max.second) % MOD;
     }
