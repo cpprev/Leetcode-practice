@@ -1,5 +1,5 @@
 /// <summary>
-/// dfs approach
+/// dfs approach (2 passes in the tree)
 /// Time complexity : O(n), n being the number of nodes in the tree
 /// Space complexity : O(n)
 /// https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/
