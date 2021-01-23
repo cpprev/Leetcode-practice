@@ -1,7 +1,7 @@
 /// <summary>
 /// backtracking approach
-/// Time complexity : O(n^2)
-/// Space complexity : O(1)
+/// Time complexity : O(n^2), n being arr's size
+/// Space complexity : O(n^2)
 /// https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/
 /// </summary>
 class Solution {
