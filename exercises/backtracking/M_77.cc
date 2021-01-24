@@ -1,7 +1,7 @@
 /// <summary>
 /// backtracking approach
-/// Time complexity : O(n*k)
-/// Space complexity : O(n*k)
+/// Time complexity : O(n!)
+/// Space complexity : O(n!)
 /// https://leetcode.com/problems/combinations/
 /// </summary>
 class Solution {
