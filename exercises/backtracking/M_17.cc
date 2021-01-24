@@ -1,7 +1,7 @@
 /// <summary>
 /// backtracking approach
-/// Time complexity : O(n)
-/// Space complexity : O(n)
+/// Time complexity : O(n!)
+/// Space complexity : O(n!)
 /// https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 /// </summary>
 class Solution {
