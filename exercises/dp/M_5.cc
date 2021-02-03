@@ -1,5 +1,7 @@
 /// <summary>
 /// DP where I store positions approach
+/// Time complexity : O(n^2)
+/// Space complexity : O(n)
 /// https://leetcode.com/problems/longest-palindromic-substring/
 /// </summary>
 class Solution {
