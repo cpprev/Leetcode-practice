@@ -1,5 +1,7 @@
 /// <summary>
 /// DP approach
+/// Time complexity : O(n^2)
+/// Space complexity : O(n^2)
 /// https://leetcode.com/problems/triangle/
 /// </summary>
 class Solution {
