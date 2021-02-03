@@ -1,7 +1,7 @@
 /// <summary>
 /// dp approach
-/// Time complexity : O(n^m)
-/// Space complexity : O(n^m)
+/// Time complexity : O(n*m)
+/// Space complexity : O(n*m)
 /// https://leetcode.com/problems/find-kth-largest-xor-coordinate-value/
 /// </summary>
 class Solution {
