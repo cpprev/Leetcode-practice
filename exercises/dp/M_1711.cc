@@ -1,5 +1,7 @@
 /// <summary>
 /// DP approach
+/// Time complexity : O(n^2)
+/// Space complexity : O(n)
 /// https://leetcode.com/problems/count-good-meals
 /// </summary>
 class Solution {
