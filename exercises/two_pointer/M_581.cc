@@ -1,5 +1,5 @@
 /// <summary>
-/// Two pointer approach (O(nlogn) time with sort, O(n) space)
+/// Two pointers approach (O(nlogn) time with sort, O(n) space)
 /// https://leetcode.com/problems/shortest-unsorted-continuous-subarray/
 /// </summary>
 class Solution {
