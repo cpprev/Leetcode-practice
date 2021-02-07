@@ -1,5 +1,6 @@
 /// <summary>
-/// DP approach
+/// DP approach : every element in the dp matrix is equal to the sum of the possible previous case
+/// ([i - 1][j] or [i][j - 1] since we can only go to the right or move down)
 /// Time complexity : O(n*n)
 /// Space complexity : O(m*n)
 /// https://leetcode.com/problems/unique-paths/
