@@ -9,13 +9,12 @@ public:
     int maximumScore(int a, int b, int c) {
         int res = 0;
         vector<int> arr = { a, b, c };
-        while (true) {
-            sort(arr.begin(), arr.end());
-            if (arr[0] == 0 and arr[1] == 0) break;
-            
+        sort(arr.begin(), arr.end());
+        while (arr[1] != 0) {            
             --arr[2];
             --arr[1];
             ++res;
+            sort(arr.begin(), arr.end());
         }
         return res;
     }
