@@ -7,12 +7,12 @@
 class Solution {
 public:
     bool canReorderDoubled(vector<int>& arr) {
-        int n = arr.size(), res = 0;
         sort(arr.begin(), arr.end());
         
         unordered_map<int, int> dp;
         for (auto& e : arr) ++dp[e];
 
+        int n = arr.size(), res = 0;
         for (auto& elem : arr) {
             auto it = dp.find(elem);
             int occ = it->second;
