@@ -6,7 +6,7 @@
 /// </summary>
 class Solution {
 public:
-    void backtrack(string cur, int ind, vector<string>& res) {
+    void backtrack(string& cur, int ind, vector<string>& res) {
         res.push_back(cur);
         
         for (int i = ind; i < cur.size(); ++i) {
