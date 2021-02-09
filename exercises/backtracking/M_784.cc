@@ -10,17 +10,18 @@ public:
         res.push_back(cur);
         
         for (int i = ind; i < cur.size(); ++i) {
+            char c = cur[i];
             if (cur[i] >= 'a' and cur[i] <= 'z') {
                 cur[i] = toupper(cur[i]);
                 backtrack(cur, i + 1, res);
-                cur[i] = tolower(cur[i]);
             }
             else if (cur[i] >= 'A' and cur[i] <= 'Z') {
                 cur[i] = tolower(cur[i]);
                 backtrack(cur, i + 1, res);
-                cur[i] = toupper(cur[i]);
             }
-            else continue;
+            else
+                continue;
+            cur[i] = c;
         }
     }
     
