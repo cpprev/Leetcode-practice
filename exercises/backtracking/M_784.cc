@@ -11,12 +11,12 @@ public:
         
         for (int i = ind; i < cur.size(); ++i) {
             char c = cur[i];
-            if (cur[i] >= 'a' and cur[i] <= 'z') {
-                cur[i] = toupper(cur[i]);
+            if (c >= 'a' and c <= 'z') {
+                cur[i] = toupper(c);
                 backtrack(cur, i + 1, res);
             }
-            else if (cur[i] >= 'A' and cur[i] <= 'Z') {
-                cur[i] = tolower(cur[i]);
+            else if (c >= 'A' and c <= 'Z') {
+                cur[i] = tolower(c);
                 backtrack(cur, i + 1, res);
             }
             else
