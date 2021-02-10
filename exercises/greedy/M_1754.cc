@@ -12,8 +12,7 @@ public:
         while (i < n1 or j < n2) {
             bool w1 = true;
             if (i < n1 and j < n2) {
-                if (word1[i] < word2[j]) w1 = false;
-                else if (word1.compare(i, n1, word2, j, n2) < 0) w1 = false;
+                if (word1.compare(i, n1, word2, j, n2) < 0) w1 = false;
             }
             else if (j < n2) w1 = false;
             
