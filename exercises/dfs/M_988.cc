@@ -6,23 +6,24 @@
 /// </summary>
 class Solution {
 public:
-    void dfs(TreeNode* root, string cur, string& m) {
+    void dfs(TreeNode* root, string& cur, string& m) {
         if (not root) return;
         
-        cur += root->val + 'a';
+        cur.insert(0, string(1, root->val + 'a'));
         
         if (not root->left and not root->right) {
-            reverse(cur.begin(), cur.end());
             if (cur.compare(m) < 0) m = cur;
         }
         
         dfs(root->left, cur, m);
         dfs(root->right, cur, m);
+        
+        cur.erase(cur.begin());
     }
     
     string smallestFromLeaf(TreeNode* root) {
-        string m = "{";
-        dfs(root, "", m);
+        string m = "{", cur = "";
+        dfs(root, cur, m);
         return m;
     }
 };
