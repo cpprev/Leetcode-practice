@@ -1,5 +1,5 @@
 /// <summary>
-/// dfs approach
+/// dfs approach (but go through tree starting from every node in the tree, this is why it's O(n^2) space complexity)
 /// Time complexity : O(n^2)
 /// Space complexity : O(n^2)
 /// https://leetcode.com/problems/linked-list-in-binary-tree/
