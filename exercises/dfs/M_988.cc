@@ -13,10 +13,7 @@ public:
         
         if (not root->left and not root->right) {
             reverse(cur.begin(), cur.end());
-            if (cur.compare(m) < 0) {
-                m = cur;
-            }
-            return;
+            if (cur.compare(m) < 0) m = cur;
         }
         
         dfs(root->left, cur, m);
