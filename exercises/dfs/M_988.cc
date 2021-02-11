@@ -9,7 +9,7 @@ public:
     void dfs(TreeNode* root, string& cur, string& m) {
         if (not root) return;
         
-        cur.insert(0, string(1, root->val + 'a'));
+        cur.insert(0, 1, root->val + 'a');
         
         if (not root->left and not root->right) {
             if (cur.compare(m) < 0) m = cur;
