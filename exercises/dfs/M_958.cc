@@ -6,21 +6,23 @@
 /// </summary>
 class Solution {
 public:
-    bool dfs(TreeNode* root, int cur_d, int& change, int& min_d) {
+    bool dfs(TreeNode* root, int cur_d, int& change_count, int& min_d) {
         if (not root) {
-            if (cur_d < min_d) {
+            int dif = min_d - cur_d;
+            if (dif > 0) {
+                if (min_d != INT_MAX and dif != 1) return false;
                 min_d = cur_d;
-                ++change;
+                ++change_count;
             }
-            return cur_d <= min_d and change <= 2;
+            return dif >= 0 and change_count <= 2;
         }
         
-        return dfs(root->left, cur_d + 1, change, min_d)
-           and dfs(root->right, cur_d + 1, change, min_d);
+        return dfs(root->left, cur_d + 1, change_count, min_d)
+           and dfs(root->right, cur_d + 1, change_count, min_d);
     }
     
     bool isCompleteTree(TreeNode* root) {
-        int min_depth = INT_MAX, change = 0;
-        return dfs(root, 0, change, min_depth);
+        int min_depth = INT_MAX, change_count = 0;
+        return dfs(root, 0, change_count, min_depth);
     }
 };
